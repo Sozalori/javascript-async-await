@@ -13,3 +13,13 @@ let getJohnProfile = () => {
   });
 };
 // Start coding here
+const asyncFunction = async () => {
+  try {
+    const getJohn = await getJohnProfile();
+  console.log(getJohn)
+
+  } catch(error) {
+    console.log("เกิดข้อผิดพลาด", error)
+  }
+}
+asyncFunction();

@@ -12,3 +12,16 @@ let getJohnProfile = () => {
   });
 };
 // Start coding here
+const forAsyncFuct = async () => {
+  try{
+    const forJohn = await getJohnProfile();
+    console.log(forJohn)
+
+  } catch (error) {
+    console.log({
+  errorCode: 500,
+  message: '👿 Failed to request data from server'
+})
+  }
+}
+forAsyncFuct();
