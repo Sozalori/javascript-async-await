@@ -32,4 +32,11 @@ let getJohnOrders = () => {
   });
 };
 
-// Start coding here
+getJohnProfile()
+  .then(function (profile) {
+    console.log(profile); // แสดงข้อมูลโปรไฟล์ก่อน
+    return getJohnOrders(); // เริ่มดึงรายการสั่งซื้อหลังจากนั้น
+  })
+  .then(function (orders) {
+    console.log(orders); // แสดงรายการสั่งซื้อ
+  });
